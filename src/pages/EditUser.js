@@ -12,7 +12,7 @@ const EditUserRole = () => {
   const allPermissions = ["create", "read", "update", "delete"];
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/users/${id}`).then((res) => {
+    axios.get(`https://octa-backend.mekanikace.cloud/users/${id}`).then((res) => {
       setUser(res.data);
       setRole(res.data.role);
       setPermissions(res.data.permissions);
@@ -29,7 +29,7 @@ const EditUserRole = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:3001/users/${id}`, {
+    await axios.put(`https://octa-backend.mekanikace.cloud/users/${id}`, {
       ...user,
       role,
       permissions,

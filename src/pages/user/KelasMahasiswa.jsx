@@ -13,9 +13,9 @@ const KelasMahasiswa = () => {
   const fetchData = async () => {
     try {
       const [resKelas, resMatkul, resDosen] = await Promise.all([
-        axios.get("http://localhost:3001/kelas"),
-        axios.get("http://localhost:3001/matakuliah"),
-        axios.get("http://localhost:3001/dosen"),
+        axios.get("https://octa-backend.mekanikace.cloud/kelas"),
+        axios.get("https://octa-backend.mekanikace.cloud/matakuliah"),
+        axios.get("https://octa-backend.mekanikace.cloud/dosen"),
       ]);
 
       setKelas(resKelas.data);

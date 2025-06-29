@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3001/users"; // ganti sesuai API kamu
+const API_URL = "https://octa-backend.mekanikace.cloud/users"; // ganti sesuai API kamu
 
 export const getUsers = async () => {
   const res = await fetch(API_URL);

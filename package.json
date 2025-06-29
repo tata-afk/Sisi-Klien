@@ -26,9 +26,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "node generate-api.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "json-server db/db.json --port 3001 --middlewares middleware/auth.js"
+    "dev": "json-server db/db.json --port 3001 --middlewares middleware/auth.js",
+    "generate-api": "node generate-api.js"
   },
   "eslintConfig": {
     "extends": [

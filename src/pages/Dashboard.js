@@ -33,10 +33,10 @@ const Dashboard = () => {
     const fetchStats = async () => {
       try {
         const [resMhs, resDosen, resMatkul, resUsers] = await Promise.all([
-          axios.get("http://localhost:3001/mahasiswa"),
-          axios.get("http://localhost:3001/dosen"),
-          axios.get("http://localhost:3001/matakuliah"),
-          axios.get("http://localhost:3001/users"),
+          axios.get("https://octa-backend.mekanikace.cloud/mahasiswa"),
+          axios.get("https://octa-backend.mekanikace.cloud/dosen"),
+          axios.get("https://octa-backend.mekanikace.cloud/matakuliah"),
+          axios.get("https://octa-backend.mekanikace.cloud/users"),
         ]);
 
         setStats({
